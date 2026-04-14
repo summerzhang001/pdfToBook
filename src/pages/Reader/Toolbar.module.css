@@ -1,0 +1,93 @@
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: var(--reader-toolbar-bg, rgba(255, 255, 255, 0.95));
+  border-bottom: 1px solid var(--color-border);
+  z-index: 200;
+  transform: translateY(-100%);
+  transition: transform 0.25s ease;
+}
+
+.topBar.visible {
+  transform: translateY(0);
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--reader-text, var(--color-text));
+  max-width: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: var(--reader-toolbar-bg, rgba(255, 255, 255, 0.95));
+  border-top: 1px solid var(--color-border);
+  z-index: 200;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+
+.bottomBar.visible {
+  transform: translateY(0);
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 4px 12px;
+}
+
+.navBtn:disabled {
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+}
+
+.progress {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
