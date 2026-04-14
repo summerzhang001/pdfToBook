@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Reader from './pages/Reader'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -18,6 +18,6 @@ export default function App() {
         />
         <Route path="/reader/:bookId" element={<Reader />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
